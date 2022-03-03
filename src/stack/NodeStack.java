@@ -1,21 +1,15 @@
 package stack;
-
-
-public class NodeStack {
-	
+public class NodeStack {	
 	private Node top;
-	
 	public void push(String s) {
 		Node newTop = new Node();
 		newTop.data = s;
 		newTop.next = top;
-		top = newTop;
-		
+		top = newTop;	
 	}
 	public String peek() {
 		return (top==null) ? null : top.data;
 	}
-	
 	public String pop() {
 		if(top!= null) {
 			String s = peek();
@@ -24,23 +18,16 @@ public class NodeStack {
 		}
 		else { 
 			return null;
-			}
-		
+			}	
 	}
-	
-	public class Node{
-		
+	public class Node{	
 		private String data;
 		private Node next;
-		
 		@Override
 		public String toString() {
 			return "Node [data=" + data + ", next=" + next + "]";
 		}
-	
 	}
-	
-
 	@Override
 	public String toString() {
         String str = "";
@@ -61,8 +48,7 @@ public class NodeStack {
       n.push("Helen");
       n.peek();
       n.pop();
-      System.out.println(n);
-      
+      System.out.println(n);   
       
 	}
 
